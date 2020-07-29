@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid; }
+
+.tabPosition {
+  position: absolute; }
+
+.tabragobj {
+  font-size: 20px; }
+
+.tabRectangle {
+  background-color: #2299ee;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  /* padding: 20px;
+    margin: 30px 20px; */
+  width: 120px;
+  height: 60px;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.tabRectangleBig {
+  background-color: #2299ee;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  /* padding: 20px;
+    margin: 30px 20px; */
+  width: 180px;
+  height: 120px;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+  border-radius: 15px; }
+
+.tabCircle {
+  background-color: #34532a;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%; }
+
+.tabCircleBig {
+  background-color: #34532a;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%; }
+
+.tabSquare {
+  background-color: #113b41;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  /* padding: 20px;
+    margin: 30px 20px; */
+  width: 60px;
+  height: 60px;
+  border-radius: 5px; }
+
+.tabSquareBig {
+  background-color: #113b41;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  /* padding: 20px;
+    margin: 30px 20px; */
+  width: 120px;
+  height: 120px;
+  border-radius: 15px; }
+
+#resize-tabContainer {
+  position: relative;
+  left: 80px;
+  top: 15px;
+  width: 1000px;
+  height: 650px;
+  box-shadow: 1px 1px 10px;
+  background-image: url("../assets/tabBG.png");
+  background-size: contain; }
+
+#resize-tabContainer li {
+  text-align: center;
+  line-height: 30px;
+  /* 要加不然interact js會跳警告 */
+  touch-action: none;
+  list-style: none; }
+
+#tabAddBtn,
+#tabSaveBtn,
+#tabToolTipBtn {
+  height: 50px;
+  width: 100px;
+  border-style: none;
+  background-color: #f8c54e;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+  font-size: 20px; }
+
+#tabSaveBtn,
+#tabToolTipBtn {
+  margin-top: -5px; }
+
+#tabToolTipBtn {
+  margin-left: 165px; }
+
+#tabSaveBtn {
+  background-color: #ff9f4b;
+  margin-left: 650px; }
+
+#tabAddBtn {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  margin-left: 16px; }
+
+.dropzone {
+  background-color: #fff;
+  width: 50px;
+  height: 80px;
+  transition: background-color 0.3s;
+  position: absolute;
+  right: -30px;
+  bottom: 35px; }
+  .dropzone img {
+    width: 100%; }
+
+#tabEditDiv {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 1000px;
+  height: 700px; }
+
+#tabEditToolTip {
+  padding: 25px;
+  position: absolute;
+  width: 400px;
+  bottom: 106px;
+  left: 100px;
+  background-color: white;
+  box-shadow: 0px 0px 10px #959595;
+  border-radius: 5px; }
+
+.-toolTip {
+  display: block; }

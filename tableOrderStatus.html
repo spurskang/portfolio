@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/browse/@coreui/coreui@2.1.16/dist/css/coreui.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.9.19/interact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link rel="stylesheet" href="./css/tabEdit.css" />
+    <link rel="stylesheet" href="./css/styleBack.css" />
+    <title>NEX POS-後台</title>
+    <link rel="icon" href="./assets/LOGO.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- 複製以下功能列 -->
+    <div class="header c-sidebar" style="background-color: #319d8e;">
+  <nav id="sideMenu">
+    <div class="loginName">
+      <span style="color: #ff9; font-size: 25px; font-weight: bold;"
+        >後台管理</span
+      >
+    </div>
+    <ul>
+      <a href="./proManage.html" style="text-decoration: none; color: inherit;">
+        <li class="@@nav0">商品管理</li>
+      </a>
+
+      <a href="./memInfo.html" style="text-decoration: none; color: inherit;">
+        <li class="@@nav1">會員管理</li>
+      </a>
+
+      <a
+        href="./managerIdPsw.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="@@nav2">店長帳密管理</li>
+      </a>
+
+      <a
+        href="./reservationRule.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="@@nav3">預約規則管理</li>
+      </a>
+
+      <a
+        href="./idPswManage.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="@@nav4">帳號密碼管理</li>
+      </a>
+
+      <a
+        href="./tableOrderStatus.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="actives">餐桌排列狀態</li>
+      </a>
+
+      <a
+        href="./discountManage.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="@@nav6">折扣管理</li>
+      </a>
+
+      <a
+        href="./dataAnalysis.html"
+        style="text-decoration: none; color: inherit;"
+      >
+        <li class="@@nav7">數據管理</li>
+      </a>
+
+      <a
+        href="./login.html"
+        style="text-decoration: none; color: inherit;"
+        class="signOutBtn"
+      >
+        <li class="logoutBack">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>登出
+        </li>
+      </a>
+    </ul>
+  </nav>
+</div>
+
+<script src="./js/signOut.js"></script>
+
+    <!-- 複製以上功能列 -->
+    <!-- 以下為各分頁內容 -->
+    <div class="c-wrapper">
+      <div class="tablehead">
+        <h1>餐桌排列狀態</h1>
+      </div>
+
+      <div class="c-body">
+        <main class="c-main">
+          <div class="container-fluid">
+            <div id="ui-view">
+              <div id="tabEditDiv">
+                <ul id="resize-tabContainer"></ul>
+                <div class="dropzone" user-select: none;>
+                  <img src="assets/trashcan.png" alt="" />
+                </div>
+              </div>
+              <div id="tabEditToolTip" style="display: none;">
+                <p>請選擇餐桌樣式及輸入桌號</p>
+
+                <select id="tabShapeSelect">
+                  <option
+                    selected
+                    disabled
+                    hidden
+                    style="display: none;"
+                    value=""
+                    >請選擇</option
+                  >
+                  <option value="tabSquare">正方形(小)</option>
+                  <option value="tabSquareBig">正方形(大)</option>
+                  <option value="tabRectangle">長方形(小)</option>
+                  <option value="tabRectangleBig">長方形(大)</option>
+                  <option value="tabCircle">圓形(小)</option>
+                  <option value="tabCircleBig">圓形(大)</option>
+                </select>
+
+                桌號：<input
+                  type="text"
+                  id="tabNumber"
+                  pattern="^[A-Za-z0-9]+$"
+                  required
+                  size="5"
+                />
+                <button id="tabAddBtn">新增餐桌</button>
+              </div>
+
+              <button id="tabToolTipBtn" style="display: inline-block;">
+                新增
+              </button>
+
+              <button id="tabSaveBtn" style="display: inline-block;">
+                儲存
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="./js/loginBack.js"></script>
+    <script src="./js/tabEdit.js"></script>
+  </body>
+</html>

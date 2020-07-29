@@ -1,0 +1,62 @@
+@charset "UTF-8";
+html {
+  background-color: #2e2d2e; }
+
+#toGoZone {
+  list-style: none;
+  width: 900px;
+  height: 100px;
+  display: flex;
+  overflow-x: auto;
+  border-top: 2px solid #28569a;
+  position: absolute;
+  top: 30px;
+  right: 200px; }
+
+#toGoZone > li {
+  margin-top: 5px;
+  width: 60px;
+  /* #ff9c40　未結帳 */
+  /* #face3d 未出餐 */ }
+
+#testQ {
+  display: none;
+  fill: #ff9c40;
+  width: 60px; }
+
+#testZ {
+  display: none;
+  fill: #face3d;
+  width: 60px; }
+
+#topTapToGo {
+  cursor: pointer; }
+
+.topTabToGo {
+  cursor: pointer; }
+
+#showTableToResPage {
+  display: flex;
+  position: relative;
+  top: 150px;
+  width: 1000px;
+  height: 650px;
+  box-shadow: 0px 0px 10px #959595;
+  margin: 0 auto; }
+  #showTableToResPage li {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px; }
+
+.topTunc {
+  position: relative; }
+
+.topTablink.topTabToGo {
+  position: absolute; }
+
+#showTableToResPage > li {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  line-height: 30px; }

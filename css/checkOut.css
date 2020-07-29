@@ -1,0 +1,319 @@
+body {
+  font-family: "jf-openhuninn-1.1";
+  font-size: 20px;
+  color: #959595;
+  width: 1440px;
+  height: 900px; }
+
+.container-fluid {
+  padding: 0; }
+
+#checkoutLeftside {
+  height: 900px; }
+
+#checkoutLeftSideTop {
+  font-size: 20px;
+  color: #959595;
+  margin-left: 40px; }
+  #checkoutLeftSideTop input {
+    margin: 10px 0px;
+    border: 0;
+    border-bottom: 1px solid #959595;
+    outline: none;
+    height: 30px; }
+  #checkoutLeftSideTop input:last-child {
+    border-style: none;
+    background-color: #F8C54E;
+    border-radius: 20px;
+    color: white;
+    outline: none;
+    margin: 10px 20px;
+    padding: 0px 10px; }
+  #checkoutLeftSideTop span {
+    margin: 10px 0px; }
+
+#checkoutLeftSideMid {
+  font-size: 20px;
+  color: #959595; }
+  #checkoutLeftSideMid .checkoutLeftSideMidItemTop {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.2s; }
+    #checkoutLeftSideMid .checkoutLeftSideMidItemTop span {
+      margin: 10px 20px; }
+  #checkoutLeftSideMid .checkoutLeftSideMidItemBottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px; }
+    #checkoutLeftSideMid .checkoutLeftSideMidItemBottom .checkoutLeftSideMidToppings {
+      line-height: 20px; }
+      #checkoutLeftSideMid .checkoutLeftSideMidItemBottom .checkoutLeftSideMidToppings span {
+        font-size: 10px;
+        box-shadow: 0px 1px 2px #959595;
+        padding: 5px 10px;
+        border-radius: 20px; }
+
+.-toblue {
+  background-color: rgba(178, 221, 234, 0.35); }
+
+.checkoutScrollbar {
+  height: 495px;
+  width: 100%;
+  background: white;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+#style-3::-webkit-scrollbar {
+  width: 10px;
+  background-color: white; }
+
+#style-3::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #DDDDDD; }
+
+#checkoutLeftSideBottomTop {
+  margin: 20px 20px 10px 0px;
+  display: flex;
+  justify-content: flex-end; }
+  #checkoutLeftSideBottomTop div {
+    margin-right: 10px;
+    height: 15px;
+    width: 50px;
+    border-bottom: 1px solid #959595; }
+
+#checkoutLeftSideBottomBottom {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap; }
+  #checkoutLeftSideBottomBottom button {
+    border-style: none;
+    background-color: #F8C54E;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    margin: 20px 20px 0px 10px;
+    padding: 10px 20px; }
+
+#checkoutMain {
+  height: 900px; }
+  #checkoutMain #checkoutMainTop {
+    height: 495px;
+    margin-top: 45px; }
+    #checkoutMain #checkoutMainTop button {
+      border: 2px solid #B2DDEA;
+      border-radius: 30px;
+      background-color: #fff;
+      color: #B2DDEA;
+      outline: none;
+      padding: 2.5px 10px;
+      margin-top: 20px;
+      margin-left: 10px;
+      transform: translateX(140px); }
+  #checkoutMain #checkoutMainBottom {
+    height: 315px; }
+  #checkoutMain .checkoutBigLetter {
+    width: 350px;
+    display: inline-block;
+    flex-direction: column; }
+    #checkoutMain .checkoutBigLetter div {
+      font-size: 35px;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0px 10px 0px; }
+  #checkoutMain .checkoutThreeLineText {
+    transform: translateY(15px);
+    width: 300px;
+    display: inline-block;
+    flex-direction: column; }
+    #checkoutMain .checkoutThreeLineText div {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0px 10px 0px; }
+  #checkoutMain #checkoutGetCash {
+    width: 100px;
+    border: 0;
+    border-bottom: 1px solid #959595;
+    outline: none;
+    height: 30px; }
+
+.checkoutMainBottomTop {
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-start; }
+  .checkoutMainBottomTop div {
+    margin-left: 10px;
+    height: 15px;
+    width: 100px;
+    border-bottom: 1px solid #959595; }
+
+#checkoutDiscount {
+  display: inline-block; }
+  #checkoutDiscount div {
+    width: 300px;
+    display: flex;
+    justify-content: space-between; }
+    #checkoutDiscount div input {
+      width: 100px;
+      border: 0;
+      border-bottom: 1px solid #959595;
+      outline: none;
+      height: 30px; }
+
+#checkoutGetPoint {
+  width: 100px;
+  border: 0;
+  border-bottom: 1px solid #959595;
+  outline: none;
+  height: 30px; }
+
+#checkoutIfDiscount, #checkoutIfPoint, #checkoutIfEachCheck {
+  display: none; }
+
+.checkoutBlueLine1 {
+  margin-left: 20%;
+  margin-top: 55px;
+  border: 5px solid #28569A;
+  width: 1px;
+  height: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  transform: translateY(25%);
+  margin-right: 20px; }
+
+.checkoutBlueLine2 {
+  margin-left: 20%;
+  margin-top: 30px;
+  border: 5px solid #28569A;
+  width: 1px;
+  height: 53px;
+  border-radius: 10px;
+  display: inline-block;
+  transform: translateY(25%);
+  margin-right: 20px; }
+
+.checkoutBlueLine3 {
+  margin-left: 20%;
+  margin-top: 30px;
+  border: 5px solid #28569A;
+  width: 1px;
+  height: 120px;
+  border-radius: 10px;
+  display: inline-block;
+  transform: translateY(25%);
+  margin-right: 20px; }
+
+#checkoutRightSide {
+  margin-right: -30px;
+  background-color: #F9F9F9;
+  border-radius: 50px 0px 0px 0px;
+  box-shadow: -1px -1px 3px #e6e6e6;
+  height: 900px;
+  display: flex;
+  flex-direction: column; }
+  #checkoutRightSide #checkoutRightSideTop {
+    margin-top: 230px;
+    text-align: center; }
+    #checkoutRightSide #checkoutRightSideTop button {
+      border: 2px solid #B2DDEA;
+      border-radius: 30px;
+      background-color: #fff;
+      color: #B2DDEA;
+      outline: none;
+      padding: 5px 10px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    #checkoutRightSide #checkoutRightSideTop input {
+      background-color: #F9F9F9;
+      margin-top: 15px;
+      width: 200px;
+      border: none;
+      border-bottom: 1px solid #959595;
+      outline: none; }
+  #checkoutRightSide #checkoutRightSideMid {
+    width: 70%;
+    margin: 15%;
+    display: flex;
+    justify-content: center; }
+    #checkoutRightSide #checkoutRightSideMid button {
+      font-size: 35px;
+      color: #959595;
+      width: 90px;
+      height: 90px;
+      border: 0;
+      border-radius: 35px;
+      background-color: #fff;
+      box-shadow: 0px 2px 3px #cfcfcf;
+      margin: 20px 15px 0px 15px;
+      outline: none; }
+    #checkoutRightSide #checkoutRightSideMid button:last-child {
+      width: 210px; }
+  #checkoutRightSide #checkoutRightSideBottom {
+    margin-top: 65%;
+    text-align: center; }
+    #checkoutRightSide #checkoutRightSideBottom #checkoutLastBtn {
+      width: 200px;
+      font-size: 40px;
+      color: #fff;
+      height: 90px;
+      border: 0;
+      border-radius: 35px;
+      background-color: #FF9F4B;
+      outline: none; }
+    #checkoutRightSide #checkoutRightSideBottom #checkoutSeparateBtn {
+      width: 200px;
+      font-size: 40px;
+      color: #fff;
+      height: 90px;
+      border: 0;
+      border-radius: 35px;
+      background-color: #FF9F4B;
+      outline: none;
+      display: none; }
+
+#checkOutDoneContainer {
+  border: 1px solid #dfdada;
+  width: 686px;
+  height: 830px;
+  margin-left: -94px;
+  border-radius: 35px; }
+  #checkOutDoneContainer h1 {
+    width: 468px;
+    padding: 50px 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+    color: #959595; }
+  #checkOutDoneContainer #checkOutDoneBox {
+    padding: 10px 0px;
+    border-top: 1px solid #959595;
+    border-bottom: 1px solid #959595;
+    width: 468px;
+    margin: 0 auto 230px; }
+  #checkOutDoneContainer table {
+    margin: 50px auto;
+    width: 468px; }
+    #checkOutDoneContainer table tbody tr th, #checkOutDoneContainer table tbody tr td {
+      padding: 10px 20px;
+      font-size: 20px;
+      color: #959595; }
+    #checkOutDoneContainer table tbody tr td {
+      text-align: right; }
+  #checkOutDoneContainer .total td, #checkOutDoneContainer .total th {
+    font-size: 30px; }
+  #checkOutDoneContainer #checkOutDone {
+    margin: 0 auto;
+    width: 200px;
+    font-size: 40px;
+    color: #fff;
+    height: 90px;
+    border: 0;
+    border-radius: 35px;
+    background-color: #FF9F4B;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px; }

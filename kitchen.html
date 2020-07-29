@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/kitchen.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>NEX POS-前台</title>
+  <link rel="icon" href="./assets/LOGO.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+  <!-- 複製以下功能列 -->
+  <div class="header c-sidebar">
+    <nav id="sideMenu">
+      <div class="light">
+        <i class="fa fa-circle" aria-hidden="true"></i>
+      </div>
+      <ul>
+        <a href="./posHomeTab.html">
+          <li class="@@nav0">
+            <i class="fa fa-home" aria-hidden="true"></i>主畫面
+          </li>
+        </a>
+        </a>
+        <a href="./reservationCalendar.html">
+          <li class="@@nav1">
+            <i class="fa fa-list-alt" aria-hidden="true"></i>訂位管理
+          </li>
+        </a>
+        <a href="./memberJoin.html">
+          <li class="@@nav2">
+            <i class="fa fa-users" aria-hidden="true"></i>會員管理
+          </li>
+        </a>
+        <a href="./orderRecord.html">
+          <li class="@@nav3">
+            <i class="fa fa-calendar" aria-hidden="true"></i>歷史訂單
+          </li>
+        </a>
+        <div class="func">
+          <div class="user"></div>
+          <div class="date">2020/6/17</div>
+          <div class="clock">10 : 35</div>
+        </div>
+        <a href="./tabShow.html">
+          <li class="@@nav4">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>關閉餐桌
+          </li>
+        </a>
+        <a href="./kitchen.html">
+          <li class="actives">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>出餐管理
+          </li>
+        </a>
+        <a href="./dailyStatementLogIn.html">
+          <li class="@@nav6">
+            <i class="fa fa-calculator" aria-hidden="true"></i>日結
+          </li>
+        </a>
+        <a href="./login.html" class="signOutBtn">
+          <li><i class="fa fa-sign-out" aria-hidden="true"></i>登出</li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+
+
+  <script>
+    let el = document.querySelector('.date');
+    let Today = new Date();
+    el.textContent = Today.getFullYear() + " / " + (Today.getMonth() + 1) + " / " + Today.getDate();
+
+    let dt = document.querySelector('.clock');
+
+    TodayHours = Today.getHours() < 10 ? '0' + Today.getHours() : Today.getHours();
+    TodayMinutes = Today.getMinutes() < 10 ? '0' + Today.getMinutes() : Today.getMinutes();
+    dt.textContent = TodayHours + " : " + TodayMinutes;
+
+  </script>
+  <script src="./js/signOut.js"></script>
+  <!-- 複製以上功能列 -->
+  <!-- 以下為各分頁內容 -->
+  <div class="c-wrapper">
+    <div class="tablehead">
+      <h1>廚房出餐管理</h1>
+    </div>
+    <div class="topFunc">
+      <a class="topTablink" style="text-decoration: none;">
+        <div class="topTab" style="cursor: pointer;" id="topTabactives">
+          <div class="toptabCaption" onclick="window.location.href='./kitchen.html'">出餐<br />管理</div>
+        </div>
+      </a>
+      <a class="topTablink" style="text-decoration: none;">
+        <div class="topTab" style="cursor: pointer;">
+          <div class="toptabCaption" onclick="window.location.href = './kitchenRecord.html'">訂單<br />記錄</div>
+        </div>
+      </a>
+    </div>
+    <!-- 以下為訂單 -->
+    <div class="resScrollbar2 kPageContainer" id="resScrollbar2">
+      <!-- <div class="kContainer" id="kOrder" style="height: 605px;width: 300px;"></div>
+      <div class="kContainer" id="kOrder" style="height: 605px;width: 300px;"></div>
+      <div class="kContainer" id="kOrder" style="height: 605px;width: 300px;"></div> -->
+      <!-- <div class="kpin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+      <div class="kHead">
+      <div class="kHeadItem">
+          <h1>訂單：A01 </h1>
+          <span> 10：35</span>
+      </div>
+      <div class="kHeadItem">
+          <h1>外帶：008</h1>
+          <span>人數：3</span>
+          <span>店員：Lily</span>
+      </div>
+      </div>
+
+
+
+      <div class="kFood">
+      <div class="kFoodBar">項 目</div>
+      <ul class="kFoodItem">
+          <li>
+          <div class="kFoodTitle">
+              <h1 class="kFoodValue">  薯條</h1>
+              <span class="kFoodValueTopping"> 生菜 </span>
+          </div>
+          <div class="kFoodNum">X1</div>
+          <div class="kFoodStatus"><i class="fa fa-check" aria-hidden="true"></i></div>
+          </li>
+      </ul>
+      </div>
+      <button class="kButton" onclick="foodDone();">訂單完成</button>
+       -->
+  </div>
+
+    
+    
+    <script src="./js/tabShow.js"></script>
+    <script src="./js/kitchen.js"></script>
+</body>
+
+</html>

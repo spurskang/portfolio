@@ -1,0 +1,159 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.9.19/interact.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script type="module" src="../js/resClose.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/posHomeTab.css" />
+  <title>NEX POS-Home Page</title>
+  <link rel="icon" href="./assets/LOGO.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 複製以下功能列 -->
+  <div class="header c-sidebar">
+  <nav id="sideMenu">
+    <div class="light">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+    </div>
+    <ul>
+      <a href="./posHomeTab.html">
+        <li class="actives">
+          <i class="fa fa-home" aria-hidden="true"></i>主畫面
+        </li>
+      </a>
+      </a>
+      <a href="./reservationCalendar.html">
+        <li class="@@nav1">
+          <i class="fa fa-list-alt" aria-hidden="true"></i>訂位管理
+        </li>
+      </a>
+      <a href="./memberJoin.html">
+        <li class="@@nav2">
+          <i class="fa fa-users" aria-hidden="true"></i>會員管理
+        </li>
+      </a>
+      <a href="./orderRecord.html">
+        <li class="@@nav3">
+          <i class="fa fa-calendar" aria-hidden="true"></i>歷史訂單
+        </li>
+      </a>
+      <div class="func">
+        <div class="user"></div>
+        <div class="date">2020/6/17</div>
+        <div class="clock">10 : 35</div>
+      </div>
+      <a href="./tabShow.html">
+        <li class="@@nav4">
+          <i class="fa fa-times-circle" aria-hidden="true"></i>關閉餐桌
+        </li>
+      </a>
+      <a href="./kitchen.html">
+        <li class="@@nav5">
+          <i class="fa fa-cutlery" aria-hidden="true"></i>出餐管理
+        </li>
+      </a>
+      <a href="./dailyStatementLogIn.html">
+        <li class="@@nav6">
+          <i class="fa fa-calculator" aria-hidden="true"></i>日結
+        </li>
+      </a>
+      <a href="./login.html" class="signOutBtn">
+        <li><i class="fa fa-sign-out" aria-hidden="true"></i>登出</li>
+      </a>
+    </ul>
+  </nav>
+</div>
+
+<script src="./js/signOut.js"></script>
+<script>
+  let el = document.querySelector('.date');
+  let Today = new Date();
+  el.textContent = Today.getFullYear() + " / " + (Today.getMonth() + 1) + " / " + Today.getDate();
+
+  let dt = document.querySelector('.clock');
+
+  TodayHours = Today.getHours() < 10 ? '0' + Today.getHours() : Today.getHours();
+  TodayMinutes = Today.getMinutes() < 10 ? '0' + Today.getMinutes() : Today.getMinutes();
+  dt.textContent = TodayHours + " : " + TodayMinutes;
+
+</script>
+  <!-- 複製以上功能列 -->
+  <div class="c-wrapper">
+    <!-- <button id="topTapToGo">外帶區</button> -->
+    <div class="topFunc">
+      <!-- <a href="memberSearch.html" class="topTablink" style="text-decoration: none;">
+              <div class="topTab">
+                <div class="toptabCaption">會員<br />查詢</div>
+              </div>
+            </a> -->
+      <a class="topTablink topTabToGo" style="text-decoration: none;">
+        <div class="topTab" id="topTabactives">
+          <div class="toptabCaption">外帶<br /></div>
+        </div>
+      </a>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" id="testQ" class="mainOrderChecked" width="60px" height="60px"
+      viewBox="0 0 340 430" style="margin: 0 auto; cursor: pointer;">
+      <path
+        d="M247.27,461.1q0-141.46,0-282.93c.1-1.2.18-2.4.32-3.6.7-5.82,1-11.73,2.24-17.45A32.2,32.2,0,0,1,261,138.33c4.55-3.72,10.06-5.48,15.59-6.81a55.2,55.2,0,0,1,12.28-1.17c13-.14,26-.05,39-.05h2.32c-.17,1.51-.35,2.78-.44,4a39,39,0,0,0,7.16,26c5.48,7.69,12.5,12.25,22.34,12.2,24.35-.14,48.71,0,73.06,0,16.37,0,32.74.05,49.11-.05a19.11,19.11,0,0,0,7.72-1.24A30.25,30.25,0,0,0,502.4,159.9a41.74,41.74,0,0,0,6.64-26c-.08-1.12-.25-2.24-.4-3.59h38.11a62.34,62.34,0,0,1,18.33,2.26c9,2.71,16.24,7.44,21.54,15.16a31,31,0,0,1,2,3.27c4.77,9.24,6.15,19.16,6.14,29.44q-.08,101.68,0,203.36c0,.8,0,1.6,0,2.59l-1.85-.69a85.79,85.79,0,0,0-9.05-3.32c-14.34-3.57-28.55-3.6-42.55,1.83-6.49,2.52-13,5-18.34,9.59-3.92,3.38-7.92,6.69-11.61,10.3-5.45,5.34-9.42,11.75-12.79,18.58a77.44,77.44,0,0,0-7.88,28.94c-1.48,20.41,3.58,38.94,16,55.32.23.3.41.63.79,1.23h-2.67q-106.25,0-212.49,0a91,91,0,0,1-11.93-.78c-9.44-1.26-17.84-4.6-23.94-12.43-4.63-5.95-6.88-12.82-8-20.11C247.87,470.27,247.68,465.67,247.27,461.1ZM421.2,345.95h74c4.73,0,9.47.07,14.2,0a8.55,8.55,0,0,0,4.45-1,16.19,16.19,0,0,0,6.59-9.15c2-7.38-.76-14.34-7.05-16.8a17.19,17.19,0,0,0-6.13-1q-87.14-.08-174.27,0c-.61,0-1.22,0-1.83,0a11.91,11.91,0,0,0-10.17,6.41c-5.4,9.87,4.8,21.93,13.31,21.79C363.31,345.66,392.26,345.95,421.2,345.95Zm2-108.57c-29,0-58,.05-87.07-.06a12.57,12.57,0,0,0-9.18,3.81c-4.86,4.7-5.18,10.37-3.2,16.49,1.56,4.82,5.37,7.79,10.38,7.79q88,0,176,0c7.4,0,14-6.81,14.11-14,.15-7-6.43-14.2-13.94-14.14C481.28,237.51,452.26,237.38,423.24,237.38Zm-49.37,186.4c12.85,0,25.71-.16,38.56.06,7.12.13,11.34-3.73,14.17-9.46a12,12,0,0,0,.82-7c-1.37-7.27-6.29-11.73-13.93-11.68-25.91.19-51.82.09-77.73,0a11.55,11.55,0,0,0-7.75,2.46c-4.72,3.93-6.19,9.11-5,14.94s5.13,11.14,13.1,10.8C348.69,423.39,361.29,423.78,373.87,423.78Z"
+        transform="translate(-247.27 -107.94)" />
+      <path
+        d="M573.86,398.94c3.49.61,9.1,1,14.32,2.64A56.12,56.12,0,0,1,607,411.15a63.15,63.15,0,0,1,16,18.6,63.88,63.88,0,0,1,7.66,38.91,59.36,59.36,0,0,1-11.1,29.16c-2.32,3.12-5,6-7.58,8.91-4.42,4.89-10,8.06-15.88,10.93-15.06,7.39-30.43,7.29-45.68,1.25a56,56,0,0,1-15.59-9.54c-13-11.22-20.27-25.65-21.68-42.89A63.21,63.21,0,0,1,534.8,413c5.33-4.68,11.5-7.57,17.9-10.35C558.87,400,565.3,399.53,573.86,398.94ZM562.3,477.65c-.65-.84-1.07-1.48-1.58-2-6.23-6.54-12.45-13.09-18.72-19.58a5.69,5.69,0,0,0-8.46-.17,6.22,6.22,0,0,0-.09,8.75c2,2.11,3.92,4.26,5.92,6.34,5.25,5.44,10.53,10.86,15.78,16.3a22.31,22.31,0,0,1,1.79,2.16c3.1,4.16,6,4.5,9.89,1.11.75-.65,1.32-1.5,2-2.22q9.56-9.88,19.14-19.74c5.57-5.7,11.22-11.32,16.8-17,2.17-2.21,4.31-4.45,6.37-6.76a6.38,6.38,0,0,0-.26-8.65,5.92,5.92,0,0,0-8.39.27c-1.83,1.78-3.5,3.73-5.29,5.55q-8.54,8.64-17.13,17.23l-.43.43Z"
+        transform="translate(-247.27 -107.94)" />
+      <path
+        d="M421,149.78H376.18a16.64,16.64,0,0,1-14.62-7.68,23.46,23.46,0,0,1-3.09-19.6c1.64-6.29,7.19-13.51,14.8-14.36a23.91,23.91,0,0,1,2.62-.2h89.68a15.5,15.5,0,0,1,11.15,4.11,23.71,23.71,0,0,1,2.82,30.68,16.19,16.19,0,0,1-13.88,7.06C450.77,149.76,435.89,149.78,421,149.78Z"
+        transform="translate(-247.27 -107.94)" />
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" id="testZ" class="mainOrder" width="60px" height="60px"
+      viewBox="0 0 340 430" style="margin: 0 auto; cursor: pointer;">
+      <path
+        d="M551.79,498.28H285.64c-3.11-.53-6.25-.92-9.32-1.62-13.82-3.14-22.76-11.8-26.44-26.37a79.1,79.1,0,0,1-2.2-19.48q0-142,0-283.93a91.06,91.06,0,0,1,1.94-20.33c2.62-11.48,8.4-20.23,19.13-24.68a47,47,0,0,1,17.82-3.4c14-.1,28,0,41.94-.05.43,0,.87.06,1.4.09-.06.47-.1.85-.16,1.23a39.45,39.45,0,0,0,4.82,25.66c5.63,9.95,13.56,15.39,25,15.32q59.78-.37,119.57,0c8.81,0,15.54-3.66,20.78-10.75q10.22-13.84,7.58-31.53h2.1c12.53,0,25.05-.06,37.58,0a81.65,81.65,0,0,1,10.58.77c17.29,2.39,29.31,13.7,33.56,31.58.83,3.49,1.24,7.08,1.84,10.63v295c-.25,2-.53,3.93-.75,5.9-2.08,18.5-11.73,29.94-28.89,34C559.67,497.27,555.7,497.65,551.79,498.28ZM418.66,246.19q43.46,0,86.91,0c4.89,0,8.66-2.09,11.66-6,3.36-4.36,4.08-9.12,1.61-14.21s-6.13-8-11.71-8q-87.29,0-174.58,0a12.76,12.76,0,0,0-3.19.31c-6.49,1.69-10.77,9.32-9.38,16.6,1.49,7.73,5.5,11.22,12.91,11.22Zm-.81,152.1h40.61c15.5,0,31,0,46.5-.06a11.7,11.7,0,0,0,5.61-1.34c4.5-2.6,7.55-10.35,6.53-15.67-1.29-6.76-6.2-11.06-12.8-11.06q-87.49,0-175,0c-.32,0-.63,0-.95,0A12.71,12.71,0,0,0,316.79,381c-1.21,8.09,6.56,17.48,14,17.41C359.78,398.13,388.82,398.29,417.85,398.29ZM420,295.11q-43.55,0-87.1,0a11.73,11.73,0,0,0-10,4.81c-3.81,5-4.08,10.49-1.68,16.21,2.25,5.37,6.25,7.22,11.74,7.21q86.15-.16,172.3,0c6.33,0,10.68-3.1,13.67-8.71a11.22,11.22,0,0,0,1.22-7.37c-1-5.74-5.53-12.24-13.85-12.18C477.52,295.24,448.73,295.11,420,295.11Z"
+        transform="translate(-247.67 -96.51)" />
+      <path
+        d="M420.54,140.17c-14,0-28-.37-41.91.1-13.77.47-22-11.34-21.5-22.8.44-9.79,6.23-18,14.72-20.21a23.11,23.11,0,0,1,5.86-.66c28.49,0,57,.11,85.46-.09,11.32-.08,19.41,8.69,20.44,19.35a23.27,23.27,0,0,1-3.73,15.6c-3.82,5.71-9.06,8.75-16,8.73C449.43,140.13,435,140.17,420.54,140.17Z"
+        transform="translate(-247.67 -96.51)" />
+    </svg>
+
+    <ul id="showTableToResPage"></ul>
+    <ul id="toGoZone"></ul>
+    <!-- 
+      <ul id="showTableToResPage"></ul>
+      <ul id="toGoZone"></ul> -->
+  </div>
+  <script src="./js/posHomeTab.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    // 判斷登入人員並顯示於頁面
+    window.addEventListener("load", function () {
+      if (sessionStorage.getItem("name")) {
+        let username = sessionStorage.getItem("name");
+        // console.log(username);
+
+        let loginName = document.querySelector(".user");
+        loginName.innerHTML = `Hi! ${username}`;
+      } else {
+        let tempStr = decodeURIComponent(location.search.substr(1));
+        let arr = tempStr.split("&");
+        // let EMP_TITLE = arr[0].split("=")[1];
+        let EMP_NAME = arr[1].split("=")[1];
+        // console.log("NAME:", EMP_NAME);
+
+        sessionStorage.setItem("name", EMP_NAME);
+        let username = sessionStorage.getItem("name");
+        // console.log(username);
+
+        let loginName = document.querySelector(".user");
+        loginName.innerHTML = `Hi! ${username}`;
+      }
+    });
+  </script>
+</body>
+
+</html>
